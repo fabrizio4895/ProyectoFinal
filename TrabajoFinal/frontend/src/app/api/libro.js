@@ -1,6 +1,6 @@
 import base from './base.js'
 
-const endpoint = '/usuario'
+const endpoint = '/libro'
 
 const findAll = async () => await base.get(endpoint);
 
