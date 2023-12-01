@@ -1,0 +1,30 @@
+GET http://localhost:3001/reserva
+######
+
+GET http://localhost:3001/reserva/2
+######
+
+POST http://localhost:3001/reserva
+Content-Type: application/json
+
+{
+    "id":3,
+    "nombre":"Pedro",
+    "apellido":"Rodriguez",
+    "curso":"Arquitectura de datos"
+}
+#######
+
+PUT http://localhost:3001/reserva
+Content-Type: application/json
+
+{
+    "id": 2,
+    "nombre": "Sandra Betty",
+    "apellido": "Sanchez",
+    "curso": "Derecho Penal"
+}
+
+#######
+
+DELETE http://localhost:3001/reserva/2

@@ -1,0 +1,36 @@
+GET http://localhost:3001/usuario
+######
+
+GET http://localhost:3001/usuario/2
+######
+
+POST http://localhost:3001/usuario
+Content-Type: application/json
+
+{
+    "id":3,
+    "nombre":"Pedro",
+    "apellido":"Morales",
+    "tipoDocumento":"DNI",
+    "NumDoc":"09217643",
+    "correo":"pedromorales43@hotmail.com",
+    "contraseña":"1654"
+}
+#######
+
+PUT http://localhost:3001/usuario
+Content-Type: application/json
+
+{
+    "id":2,
+    "nombre":"Romina",
+   "apellido":"Salas",
+    "tipoDocumento":"DNI",
+    "NumDoc":65327190,
+    "correo":"salasromina21@hotmail.com",
+    "contraseña":"1942"
+}
+
+#######
+
+DELETE http://localhost:3001/usuario/2

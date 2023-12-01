@@ -1,0 +1,48 @@
+GET http://localhost:3001/libro
+######
+
+GET http://localhost:3001/libro/2
+######
+
+POST http://localhost:3001/libro
+Content-Type: application/json
+
+{
+    "id":3,
+    "formato": "Libro físico",
+    "autor": "Raul Cardenas",
+    "editorial": "Liki",
+    "categoria": "Adultos",
+    "anio": "2019",
+    "idioma": "Español",
+    "nro-paginas": "120",
+    "encuadernacion": "Tapa dura",
+    "ISBN13": "2233267492",
+    "imagen-portada-url": "https://images.cdn2.buscalibre.com/fit-in/180x180/1f/a6/1fa666e0f93fb0bc63c4c214188f3a46.jpg",
+    "titulo": "Atolondración en las montañas",
+    "url-compra": "https://www.buscalibre.pe/libro-atolondracion-de-las-montañas/9788423687572/p/2858249"     
+}
+#######
+
+PUT http://localhost:3001/libro
+Content-Type: application/json
+
+{
+    "id":3,
+    "formato": "Libro físico",
+    "autor": "Lana Flores",
+    "editorial": "Fondo editorial universidad césar vallejo",
+    "categoria": "Ingenieria",
+    "anio": "2019",
+    "idioma": "Español",
+    "nro-paginas": "128",
+    "encuadernacion": "Tapa blanda",
+    "ISBN13": "9786124435058",
+    "imagen-portada-url": "https://images.cdn1.buscalibre.com/fit-in/180x180/20/82/2082a4e5a59dcf7e8531feb8e488c30b.jpg",
+    "titulo": "Gestion de proyecto de Software",
+    "url-compra": "https://www.buscalibre.pe/libro-gestion-de-proyecto-de-software/9786124435058/p/54600899"     
+}
+
+#######
+
+DELETE http://localhost:3001/libro/2
