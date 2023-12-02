@@ -1,29 +1,28 @@
-import express from 'express';
-import bodyParser from 'body-parser'
-import cors from 'cors'
+import app from './app.js'
+import sequelize from './config/database.js'
 
-import usuarioRoutes from './routes/usuario.js';
-import libroRoutes from './routes/libro.js'
-import reservaRoutes from './routes/reserva.js'
+async function main() {
+    try  {
 
-var app = express(); //app representa a nuestro aplicativo web
+        const init = process.argv[2]
 
-//para que utilize el body-parser, este ayuda a que el API pueda reconocer el cuerpo de los "usuario" creados
-app.use(bodyParser.json())
-app.use(cors()) //Con esto el api acepta peticiones desde cualquier ruta
+        if (init)
+            await sequelize.sync({force: true})
+        else
+            await sequelize.sync({force: false})
 
-//Se recibe la petición con get
-//Cada que corra la página, aparecerá el result:'ok'
-app.get('/',(req,res) => {
-    return res.json({ result: 'OK'})
-});
+        console.log('conexión exitosa!')
 
-//El use para especificar que utilice la ruta con este endpoint
-app.use("/usuario", usuarioRoutes);
-app.use("/libro", libroRoutes);
-app.use("/reserva", reservaRoutes);
+        
+        const port = process.env.PORT || 3001
 
+        app.listen(3001, () => {
+            console.log('Servidor iniciado. Escuchando en puerto 3001')
+        })
 
-app.listen(3001, () => {
-    console.log('Servidor iniciado en el puerto 3001')
-})
+    } catch(err) {
+        console.error(err)
+    }
+}
+
+main();

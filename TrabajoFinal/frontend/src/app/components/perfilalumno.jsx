@@ -32,7 +32,7 @@ const PerfilAlumno = () =>{
                     <div className={styles.recuadro1}>   
                         <div className={styles.cuadro1}>
                             <div className={styles.contenedorphoto}>
-                                <span>hola</span>
+                                <span></span>
                             </div>
                         </div>
                         <div className={styles.cuadro2}>
@@ -43,20 +43,15 @@ const PerfilAlumno = () =>{
                                 </ul>
                             </nav>
                             <form className={styles.formulario}action="">
-                                <div className={styles.label} htmlFor="">
+                                <div className={styles.label1} htmlFor="">
                                     <label className={styles.placeholder} htmlFor="">Nombres</label>
                                     <input className={styles.input} type="text" />
-                                    
-                                </div>
-                                <div className={styles.label} htmlFor="">
                                     <label className={styles.placeholder} htmlFor="">Tipo de Documento</label>
                                     <input className={styles.input} type="text" />
                                 </div>
-                                <div className={styles.label} htmlFor="">
+                                <div className={styles.label2} htmlFor="">
                                     <label className={styles.placeholder} htmlFor="">Apellidos</label>
                                     <input className={styles.input} type="text" />
-                                </div>
-                                <div className={styles.label} htmlFor="">
                                     <label className={styles.placeholder} htmlFor="">Nro de Documento</label>
                                     <input className={styles.input} type="text" />
                                 </div>

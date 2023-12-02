@@ -281,3 +281,28 @@
     font-weight: 400;
     line-height: 20px; 
 }
+
+.placeholder{
+    display: flex;
+}
+
+.parte2{
+    font-family: 'Roboto', sans-serif;
+}
+
+.input{
+    display: inline-block;
+    
+}
+
+.Button{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.label1{
+    display: column;
+}

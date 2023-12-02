@@ -5,7 +5,6 @@ import Reserva from "./components/reserva/reserva.jsx"
     return (
       <>
         <Login />
-      </>
-        
+      </>        
     )
   }
